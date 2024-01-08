@@ -1,0 +1,28 @@
+autocomplete
+  hrsh7th/nvim-cmp, main
+  hrsh7th/cmp-nvim-lsp, main
+  saadparwaiz1/cmp_luasnip, master
+  FelipeLema/cmp-async-path, main
+  ray-x/cmp-treesitter, master
+  L3MON4D3/LuaSnip, v2.2.0
+  rafamadriz/friendly-snippets, main
+lsp
+  williamboman/mason.nvim, main
+  williamboman/mason-lspconfig.nvim, main
+  nvimtools/none-ls.nvim, main
+  neovim/nvim-lspconfig, master
+git
+  lewis6991/gitsigns.nvim, main
+  kdheepak/lazygit.nvim, main
+comments
+  terrortylor/nvim-comment, main
+ui
+  nvim-lua/plenary.nvim, master
+  nvim-telescope/telescope.nvim, 0.1.x
+  nvim-telescope/telescope-file-browser.nvim, master
+  nvim-telescope/telescope-ui-select.nvim, master
+  nvim-treesitter/nvim-treesitter, master
+  echasnovski/mini.statusline, main
+  nvim-tree/nvim-web-devicons, master
+colors
+  catppuccin/nvim, main
