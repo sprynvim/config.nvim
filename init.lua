@@ -1,4 +1,4 @@
-require("options")
-vim.cmd.colorscheme "catppuccin-latte"
-require("keymaps")
 require("spry")
+require("options")
+require("keymaps")
+vim.cmd.colorscheme "catppuccin-latte"
