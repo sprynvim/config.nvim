@@ -26,5 +26,15 @@ keymap.set("n", "<leader>d", ":lua vim.diagnostic.open_float()<CR>")
 keymap.set("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>")
 keymap.set("n", "]d", ":lua vim.diagnostic.goto_next()<CR>")
 
+-- Comment Lines
 keymap.set("n", "<leader>/", ":CommentToggle<CR>", { noremap = true })
 keymap.set("x", "<leader>/", ":'<,'>CommentToggle<CR>", { noremap = true })
+
+-- Window management
+keymap.set("n", "<leader>nv", ":vnew<CR>", { desc = "New vertical split" })
+keymap.set("n", "<leader>nh", ":new<CR>", { desc = "New horizontal split" })
+keymap.set("n", "<leader>wh", ":wincmd h<CR>", { desc = "Move cursor to window at left" })
+keymap.set("n", "<leader>wj", ":wincmd j<CR>", { desc = "Move cursor to window below" })
+keymap.set("n", "<leader>wk", ":wincmd k<CR>", { desc = "Move cursor to window above" })
+keymap.set("n", "<leader>wl", ":wincmd l<CR>", { desc = "Move cursor to window at right" })
+keymap.set("n", "<leader>wq", ":q<CR>", { desc = "Close window" })
