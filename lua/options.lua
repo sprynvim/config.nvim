@@ -49,5 +49,9 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
+-- Scroll Offset
+opt.scrolloff = 20
+opt.sidescrolloff = 999
+
 -- turn off swapfile
 opt.swapfile = false
