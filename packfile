@@ -26,3 +26,6 @@ ui
   nvim-tree/nvim-web-devicons, master
 colors
   catppuccin/nvim, main
+debug
+  mfussenegger/nvim-dap, master
+  nvim-telescope/telescope-dap.nvim, master

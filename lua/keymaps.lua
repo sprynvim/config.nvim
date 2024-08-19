@@ -4,6 +4,9 @@ local keymap = vim.keymap
 keymap.set("n", "<C-s>", ":w<CR>", { desc = "Save current buffer in normal mode." })
 keymap.set("i", "<C-s>", "<Esc>:w<CR>l ", { desc = "Save current buffer in insert mode." })
 keymap.set("x", "<C-s>", "<Esc>:w<CR> ", { desc = "Save current buffer in visual mode." })
+keymap.set("n", "<C-a>", ":wa<CR>", { desc = "Save all current buffers in normal mode." })
+keymap.set("i", "<C-a>", "<Esc>:wa<CR>l ", { desc = "Save all current buffers in insert mode." })
+keymap.set("x", "<C-a>", "<Esc>:wa<CR> ", { desc = "Save all current buffers in visual mode." })
 
 -- Switch between tabs and spaces
 keymap.set("n", "<leader>us", ":set et<CR>", { desc = "Use spaces" })
@@ -38,3 +41,19 @@ keymap.set("n", "<leader>wj", ":wincmd j<CR>", { desc = "Move cursor to window b
 keymap.set("n", "<leader>wk", ":wincmd k<CR>", { desc = "Move cursor to window above" })
 keymap.set("n", "<leader>wl", ":wincmd l<CR>", { desc = "Move cursor to window at right" })
 keymap.set("n", "<leader>wq", ":q<CR>", { desc = "Close window" })
+keymap.set("n", "<leader>ct", ":bd!<CR>", { desc = "Quit and Close Terminal" })
+
+-- Tab management
+keymap.set("n", "<C-t>", ":tabe<CR>", { desc = "New tab." })
+keymap.set("n", "<C-k>", ":tabfirst<CR>", { desc = "Move to first tab." })
+keymap.set("n", "<C-j>", ":tablast<CR>", { desc = "Move to last tab." })
+keymap.set("n", "<C-h>", ":tabp<CR>", { desc = "Move to previous tab." })
+keymap.set("n", "<C-l>", ":tabn<CR>", { desc = "Move to next tab." })
+keymap.set("n", "<C-x>", ":tabdo | q<CR>", { desc = "Close all tabs and quit." })
+keymap.set("n", "<leader>m", ":tabc<CR>", { desc = "Close this tab." })
+keymap.set("n", "<leader>mo", ":tabo<CR>", { desc = "Close other tabs." })
+vim.keymap.set("n", "1", ":tabn 1<CR>", { desc = "Move to first tab." })
+vim.keymap.set("n", "2", ":tabn 2<CR>", { desc = "Move to second tab." })
+vim.keymap.set("n", "3", ":tabn 3<CR>", { desc = "Move to third tab." })
+vim.keymap.set("n", "4", ":tabn 4<CR>", { desc = "Move to fourth tab." })
+vim.keymap.set("n", "5", ":tabn 5<CR>", { desc = "Move to fifth tab." })

@@ -2,9 +2,11 @@ require("mason").setup()
 
 require("mason-lspconfig").setup({
 	ensure_installed = {
+    "html",
 		"lua_ls",
 		"tsserver",
     "eslint",
+    "tailwindcss",
 	},
 })
 
@@ -22,9 +24,11 @@ end
 
 local vim = vim
 local lspconfig = require("lspconfig")
+lspconfig.html.setup({})
+lspconfig.tailwindcss.setup({})
 lspconfig.lua_ls.setup({})
 lspconfig.tsserver.setup({
-  filetypes = {"javascript", "typescript", "html"},
+  filetypes = {"javascript", "typescript"},
 })
 lspconfig.eslint.setup({})
 local keymap = vim.keymap
