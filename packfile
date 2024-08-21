@@ -24,6 +24,7 @@ ui
   nvim-treesitter/nvim-treesitter, master
   echasnovski/mini.statusline, main
   nvim-tree/nvim-web-devicons, master
+  sprynvim/spry.line, main
 colors
   catppuccin/nvim, main
 debug
