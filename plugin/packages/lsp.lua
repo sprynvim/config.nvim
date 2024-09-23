@@ -2,11 +2,11 @@ require("mason").setup()
 
 require("mason-lspconfig").setup({
 	ensure_installed = {
-    "html",
+		"html",
 		"lua_ls",
-		"tsserver",
-    "eslint",
-    "tailwindcss",
+		"ts_ls",
+		"eslint",
+		"tailwindcss",
 	},
 })
 
@@ -27,10 +27,19 @@ local lspconfig = require("lspconfig")
 lspconfig.html.setup({})
 lspconfig.tailwindcss.setup({})
 lspconfig.lua_ls.setup({})
-lspconfig.tsserver.setup({
-  filetypes = {"javascript", "typescript"},
+lspconfig.ts_ls.setup({
+	filetypes = { "javascript", "typescript" },
 })
 lspconfig.eslint.setup({})
+
+local null_ls = require("null-ls")
+null_ls.setup({
+	sources = {
+		null_ls.builtins.formatting.stylua,
+    null_ls.builtins.diagnostics.tidy,
+	},
+})
+
 local keymap = vim.keymap
 keymap.set("n", "K", vim.lsp.buf.hover, {})
 keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -42,10 +51,3 @@ keymap.set("n", "gr", vim.lsp.buf.references, {})
 keymap.set("n", "<leader>f", function()
 	vim.lsp.buf.format({ async = true })
 end, {})
-
-local null_ls = require("null-ls")
-null_ls.setup({
-	sources = {
-		null_ls.builtins.formatting.stylua,
-	},
-})
