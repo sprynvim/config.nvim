@@ -11,11 +11,13 @@ lsp
   williamboman/mason-lspconfig.nvim, main
   nvimtools/none-ls.nvim, main
   neovim/nvim-lspconfig, master
+  markgarrigan/edge.nvim, main
 git
   lewis6991/gitsigns.nvim, main
   kdheepak/lazygit.nvim, main
 comments
   terrortylor/nvim-comment, main
+  JoosepAlviste/nvim-ts-context-commentstring, main
 ui
   nvim-lua/plenary.nvim, master
   nvim-telescope/telescope.nvim, 0.1.x
@@ -29,4 +31,9 @@ colors
   catppuccin/nvim, main
 debug
   mfussenegger/nvim-dap, master
-  nvim-telescope/telescope-dap.nvim, master
+  rcarriga/nvim-dap-ui, master
+  nvim-neotest/nvim-nio, master
+  jay-babu/mason-nvim-dap.nvim, main
+  theHamsta/nvim-dap-virtual-text, master
+ai
+  CopilotC-Nvim/CopilotChat.nvim, main

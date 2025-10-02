@@ -30,13 +30,13 @@ opt.background = "light" -- colorschemes that can be light or dark will be made 
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- hide lsp virtual text
-vim.diagnostic.config({virtual_text = false})
+vim.diagnostic.config({ virtual_text = false })
 
 -- Change diagnostic symbols in gutter
 local signs = { Error = "✖︎", Warn = "！", Hint = "⚡︎", Info = "ℹ" }
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
 -- backspace
@@ -55,3 +55,13 @@ opt.sidescrolloff = 999
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- control word wrap
+vim.api.nvim_create_augroup("NoWrapForHTML", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = "NoWrapForHTML",
+	pattern = "html",
+	callback = function()
+		vim.opt_local.wrap = false
+	end,
+})
